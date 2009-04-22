@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE window [
+    <!ENTITY % aboutDTD SYSTEM "chrome://simpledelicious/locale/about.dtd">
+    %aboutDTD;
+]>
+
+<window class="dialog"
+	title="&win.title;"
+	onload="sizeToContent()"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://simpledelicious/content/about.js" />
+
+<groupbox align="center" orient="horizontal">
+<vbox>
+  <description value="&extName.label;" style="font-weight: bold; font-size: x-large;"/>
+  <description value="&extVersion.label;"/>
+  <spacer style="height:15px"/>
+  <description value="&homepage.label;" style="font-weight: bold;"/>
+  <hbox>
+    <label value="&homepageURL.label;"
+  		class="text-link"
+        	href="http://del.icio.us/" onclick="openURL(event.target.getAttribute('href'));"/>
+   <spacer flex="1"/>     	
+  </hbox>
+  <spacer style="height:15px"/>
+  <description value="&developedBy.label;" style="font-weight: bold;"/>
+  <hbox>
+    <label value="&author.label;"
+  		class="text-link"
+  		href="http://del.icio.us/" onclick="openURL(event.target.getAttribute('href'));"/>
+    <spacer flex="1"/>     	
+  </hbox>
+</vbox>
+<image src="chrome://simpledelicious/skin/about-delicious.png" style="padding: 0px 5px 0px 5px"/>
+</groupbox>
+
+<box align="right" pack="center" flex="1">
+	<button label="&close.label;" oncommand="window.close();"/>
+</box>
+</window>
+

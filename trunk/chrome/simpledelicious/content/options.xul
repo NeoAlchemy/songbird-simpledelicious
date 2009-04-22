@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE window [
+    <!ENTITY % optionsDTD SYSTEM "chrome://simpledelicious/locale/options.dtd">
+    %optionsDTD;
+]>
+
+<window class="dialog"
+	title="&win.title;"
+	onload="sizeToContent(); startup();"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/x-javascript" src="chrome://simpledelicious/content/util.js" />
+ <script type="application/x-javascript" src="chrome://simpledelicious/content/delicious.js" />
+ <script type="application/x-javascript" src="chrome://simpledelicious/content/options.js" />
+
+<vbox>
+<tabbox id="myTabList" selectedIndex="0">
+  <tabs>
+    <tab label="My Account"/>
+    <tab label="Options"/>
+  
+  </tabs>
+  <tabpanels>
+    <tabpanel>
+    	<groupbox orient="horizontal">
+      		<caption label="del.icio.us Account information" class="header"/>
+    		<grid flex="2">
+    			<columns>
+    				<column flex="1"/>
+    				<column flex="2"/>
+    			</columns>
+    			<rows>
+    				<row>
+    					<label value="User name"/>
+    					<textbox id="userName"/>
+    				</row>
+    				<row>
+    					<label value="Password"/>
+    					<textbox id="password" type="password"/>
+    				</row>
+    			</rows>
+    		</grid>
+    			
+    		
+    	
+    	</groupbox>
+    
+    </tabpanel>
+    <tabpanel><!-- tabpanel Second elements go here -->
+    </tabpanel>
+    
+  </tabpanels>
+</tabbox>
+
+<box orient="horizontal">
+	<stack>
+	
+			<button label="OK" left="20" oncommand="optionsHandleOK(self);"/>
+			<button label="Cancel"   left="130" oncommand="self.close();"/>
+			<button label="clear" left="240" oncommand="cmdClear();"/>
+	</stack>
+</box>
+
+</vbox>
+</window>
+

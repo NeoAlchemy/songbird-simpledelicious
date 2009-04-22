@@ -1,0 +1,8 @@
+content	simpledelicious	jar:chrome/simpledelicious.jar!/content/
+skin	simpledelicious	classic/1.0	jar:chrome/simpledelicious.jar!/skin/
+locale	simpledelicious	en-US	jar:chrome/simpledelicious.jar!/locale/en-US/
+
+overlay	chrome://browser/content/browser.xul	chrome://simpledelicious/content/delicious.xul
+overlay	chrome://songbird/content/xul/layoutWithBrowserOverlay.xul 	chrome://simpledelicious/content/delicious-songbird.xul
+
+style	chrome://global/content/customizeToolbar.xul	chrome://simpledelicious/skin/delicious.css
