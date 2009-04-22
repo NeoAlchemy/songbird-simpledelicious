@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://simpledelicious/locale/delicious.dtd" >
+
+<?xml-stylesheet href="chrome://simpledelicious/skin/delicious.css" type="text/css"?>
+<?xml-stylesheet href="chrome://simpledelicious/skin/delicious_mac.css" type="text/css"?>
+
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="DeliciousOverlay"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:xbl="http://www.mozilla.org/xbl">
+
+	<script type="application/x-javascript" src="chrome://simpledelicious/content/util.js" />
+	<script type="application/x-javascript" src="chrome://simpledelicious/content/gutil.js" />
+  <script type="application/x-javascript" src="chrome://simpledelicious/content/tag_item.js" />
+  <script type="application/x-javascript" src="chrome://simpledelicious/content/options.js" />
+  <script type="application/x-javascript" src="chrome://simpledelicious/content/delicious.js" />
+	<script>
+<![CDATA[
+
+
+]]>
+</script>
+	
+  <stringbundleset id="stringbundleset"> 
+      <stringbundle id="bundle_simpledelicious" src="chrome://simpledelicious/locale/delicious.properties" />
+  </stringbundleset>
+
+
+  <menubar id="main-menubar">
+	<popupset>
+  		<menupopup id="clipmenu">	
+    		<menuitem label="Open" oncommand="sdeliciousMain.handleCmdOpen(event);"/>
+			<menuitem label="Open in new tab" oncommand="sdeliciousMain.handleCmdOpen(event,1);"/>
+			<menuitem label="Delete" oncommand="Util.callFunc('sdeliciousMain','deleteMenuItem',this);"/>
+  		</menupopup>
+  	</popupset>  
+    <menu id="simple_delicious-menu" label="&sdel.menu.label;" insertafter="helpMenu" >
+		<menupopup id="dpopup" onpopupshowing="sdeliciousMain.showMenuTags(event);" >  		
+    	</menupopup>
+    </menu>
+ 
+  </menubar>
+  
+</overlay>

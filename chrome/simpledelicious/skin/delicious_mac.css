@@ -1,0 +1,49 @@
+#del-button-delicious { 
+  list-style-image: url("chrome://del.icio.us/skin/mydelicious-mac.png"); 
+  -moz-image-region: rect(0px 32px 32px 0px);  
+}
+
+#del-button-delicious:hover {
+  -moz-image-region: rect(32px 32px 64px 0px);
+}
+
+#del-button-delicious[disabled="true"] { 
+  -moz-image-region: rect(64px 32px 96px 0px);
+}
+
+toolbar[iconsize="small"] #del-button-delicious {
+  list-style-image: url("chrome://del.icio.us/skin/mydelicious-mac-small.png");
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+toolbar[iconsize="small"] #del-button-delicious:hover {
+  -moz-image-region: rect(24px 24px 48px 0px);
+}
+toolbar[iconsize="small"] #del-button-delicious[disabled="true"] {
+  -moz-image-region: rect(48px 24px 72px 0px);
+}
+
+
+
+#del-button-tagPage { 
+  list-style-image: url("chrome://del.icio.us/skin/tagdelicious-mac.png"); 
+  -moz-image-region: rect(0px 32px 32px 0px);  
+}
+
+#del-button-tagPage:hover {
+  -moz-image-region: rect(32px 32px 64px 0px);
+}
+
+#del-button-tagPage[disabled="true"] { 
+  -moz-image-region: rect(64px 32px 96px 0px);
+}
+
+toolbar[iconsize="small"] #del-button-tagPage {
+  list-style-image: url("chrome://del.icio.us/skin/tagdelicious-mac-small.png");
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+toolbar[iconsize="small"] #del-button-tagPage:hover {
+  -moz-image-region: rect(24px 24px 48px 0px);
+}
+toolbar[iconsize="small"] #del-button-tagPage[disabled="true"] {
+  -moz-image-region: rect(48px 24px 72px 0px);
+}

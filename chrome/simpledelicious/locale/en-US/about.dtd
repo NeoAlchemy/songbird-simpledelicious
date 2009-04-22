@@ -1,0 +1,8 @@
+<!ENTITY win.title		"About SimpleDelicious extension">
+<!ENTITY extName.label		"SimpleDelicious">
+<!ENTITY extVersion.label	"Version 1.0 - Copyright (c) 2006">
+<!ENTITY developedBy.label	"Developed By">
+<!ENTITY author.label		"Jonathan Zhang">
+<!ENTITY homepage.label		"Home Page">
+<!ENTITY homepageURL.label	"http://www.topdogster.com/">
+<!ENTITY close.label		"Close">

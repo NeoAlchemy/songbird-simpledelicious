@@ -1,0 +1,14 @@
+<project name="simpledelicious" basedir=".">
+    <description>
+        build simpledelicious for songbird
+    </description>
+
+    <!-- chrome jar -->
+    <delete  file="chrome/simpledelicious.jar"/>
+    <jar destfile="chrome/simpledelicious.jar" basedir="./chrome/simpledelicious" />
+
+    <!-- Zip the results into an xpi file -->
+    <delete  file="simpledelicious-1.1.0-sb-fx.xpi"/>
+    <zip destfile="simpledelicious-1.1.0-sb-fx.xpi" basedir="./" includes="chrome.manifest, install.rdf, chrome/simpledelicious.jar, defaults/preferences/delicious.js"/>
+
+</project>
